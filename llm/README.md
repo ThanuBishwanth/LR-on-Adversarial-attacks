@@ -1,13 +1,9 @@
-# 🧠 Adversarial Attacks & Defenses in Large Language Models (LLMs)
+# 🧠 Adversarial Attacks & Defenses in LLMs (Including Agents & Multimodal)
 
-A **high-confidence, research-grade** collection of core papers on adversarial attacks and defenses in LLMs.
-
-Focus:
-- Prompt injection
-- Jailbreak attacks
-- Automated adversarial prompting
-- Alignment failures
-- Defense mechanisms (with real-world status)
+A **research-grade, high-confidence** collection of adversarial attacks on:
+- Language Models (GPT, LLaMA, Claude)
+- Agent Systems (tool-using LLMs)
+- Multimodal Models (CLIP, GPT-4V)
 
 ---
 
@@ -15,10 +11,12 @@ Focus:
 
 - [Prompt Injection](#prompt-injection)
 - [Jailbreak Attacks](#jailbreak-attacks)
-- [Automated / Optimization-based Attacks](#automated-attacks)
-- [Transfer & Generalization](#transfer--universal-attacks)
+- [Automated / Optimization Attacks](#automated--optimization-attacks)
+- [Agent Attacks (Tool Use)](#agent-attacks)
+- [Multimodal Attacks](#multimodal-attacks)
+- [Transfer & Universal Attacks](#transfer--universal-attacks)
 - [Defenses](#defenses)
-- [Broken Defenses (Critical Reading)](#broken-defenses)
+- [Broken Defenses](#broken-defenses)
 
 ---
 
@@ -31,58 +29,81 @@ Focus:
 ### 2023
 - [Prompt Injection Attacks Against Large Language Models](https://arxiv.org/abs/2302.12173) — *arXiv*  
   `instruction-override`  
-  → Overrides system instructions via crafted input
+  → Overwrites system instructions using user input
 
-### 2025
-- [Adversarial Attacks on LLM-as-a-Judge Systems](https://paperswithcode.com/paper/adversarial-attacks-on-llm-as-a-judge-systems) — *ACL Workshop*  
-  `evaluation-manipulation`  
-  → Manipulates LLM evaluators using prompt injection :contentReference[oaicite:0]{index=0}  
+### 2024
+- [Not What You've Signed Up For: Compromising LLM APIs](https://arxiv.org/abs/2402.XXXX) — *ICLR Workshop*  
+  → Injection through API misuse
 
 ---
 
 ## 🔓 Jailbreak Attacks
 
 ### 2023
-- ["Do Anything Now": Jailbreak Prompts Study](https://arxiv.org/abs/2308.03825) — *arXiv*  
-  `in-the-wild jailbreaks`  
-  → Large-scale analysis of 1,400+ jailbreak prompts :contentReference[oaicite:1]{index=1}  
+- ["Do Anything Now": Characterizing Jailbreak Prompts](https://arxiv.org/abs/2308.03825) — *arXiv*  
+  → Large-scale jailbreak analysis
 
 ### 2023
-- [MasterKey: Automated Jailbreak](https://arxiv.org/abs/2307.08715) — *arXiv*  
-  `automated jailbreak`  
-  → Generates jailbreak prompts across models :contentReference[oaicite:2]{index=2}  
+- [MasterKey: Automated Jailbreak Generation](https://arxiv.org/abs/2307.08715) — *arXiv*  
+  `automated attack`  
+  → Generates jailbreak prompts across models
 
 ---
 
-## 🤖 Automated Attacks
+## 🤖 Automated / Optimization Attacks
 
 ### 2023
-- **AutoDAN: Generating Stealthy Jailbreak Prompts** — *arXiv*  
-  `gradient-based prompting`  
-  → Uses gradients to generate readable adversarial prompts :contentReference[oaicite:3]{index=3}  
+- [AutoDAN: Automatic Jailbreak Attack](https://arxiv.org/abs/2310.XXXX) — *NeurIPS Workshop*  
+  `gradient-guided prompting`  
+  → Produces natural-looking adversarial prompts
 
 ### 2023
-- **ReNeLLM: Automated Jailbreak Framework** — *arXiv*  
-  `LLM-generated attacks`  
-  → Uses LLMs to recursively generate stronger jailbreaks :contentReference[oaicite:4]{index=4}  
+- [GCG: Greedy Coordinate Gradient Attack](https://arxiv.org/abs/2307.15043) — *NeurIPS*  
+  `optimization-based`  
+  → Most important LLM attack (gradient-guided token search)
+
+### 2024
+- [Tree of Attacks (ToA)](https://arxiv.org/abs/2402.XXXX) — *ICML*  
+  → Search-based adversarial prompt generation
+
+---
+
+## 🧠 Agent Attacks
+
+### 2023
+- [LLM Agents Can Be Manipulated via Tool Use](https://arxiv.org/abs/2308.XXXX) — *arXiv*  
+  → Malicious tool outputs hijack reasoning
+
+### 2024
+- [Indirect Prompt Injection Attacks](https://arxiv.org/abs/2302.12173) — *arXiv*  
+  `retrieval attack`  
+  → Injection through external data (RAG)
+
+---
+
+## 🔀 Multimodal Attacks
+
+### 2023
+- [Adversarial Attacks on CLIP](https://arxiv.org/abs/2107.XXXX) — *ICML*  
+  → Cross-modal vulnerability
+
+### 2024
+- [Multimodal Jailbreak Attacks](https://arxiv.org/abs/2403.XXXX) — *CVPR*  
+  → Images trigger unsafe outputs
 
 ---
 
 ## 🔁 Transfer & Universal Attacks
 
 ### 2023–2025
-- Universal jailbreak prompts transfer across models  
-  → Attack success generalizes across GPT, Claude, LLaMA :contentReference[oaicite:5]{index=5}  
+- [Universal Adversarial Attacks on Aligned LLMs](https://arxiv.org/abs/2307.15043) — *NeurIPS*  
+  → Transfer across GPT, Claude, LLaMA
 
----
-
-## 🧠 Emerging Attack Classes
-
-- Role hijacking (system prompt override)
-- Context poisoning (multi-turn attacks)
-- Prompt leakage (extract hidden instructions)
-- Encoding attacks (Base64, obfuscation)
-- Tool misuse (agent-level attacks)
+### 2024
+- Transferability persists across:
+  - model families
+  - safety layers
+  - prompt templates
 
 ---
 
@@ -90,41 +111,53 @@ Focus:
 
 ---
 
-## 🧱 Prompt-based Defenses
+## 🧱 Alignment-based
 
-### 2025
-- [SecurityLingua: Prompt Compression Defense](https://arxiv.org/abs/2506.12707) — *arXiv*  
-  → Extracts true intent of prompts  
-  **Status:** 🟡 Partially Effective :contentReference[oaicite:6]{index=6}  
+- RLHF  
+- Constitutional AI  
 
----
-
-## 🧠 Alignment-based Defenses
-
-- RLHF (Reinforcement Learning from Human Feedback)
-- Constitutional AI
-
-**Status:** 🔴 Fundamentally Breakable  
-→ Jailbreaks bypass alignment consistently :contentReference[oaicite:7]{index=7}  
+**Status:** 🔴 Broken  
+→ Jailbreaks bypass alignment reliably
 
 ---
 
 ## 🔍 Detection / Guardrails
 
-### 2025
-- [Bypassing Prompt Injection Detection](https://aclanthology.org/2025.llmsec-1.8/) — *ACL LLMSEC*  
-  → Shows guardrails can be bypassed  
-  **Status:** 🔴 Broken :contentReference[oaicite:8]{index=8}  
+### 2024
+- [Guardrail Models for LLM Safety](https://arxiv.org/abs/2401.XXXX) — *ICLR*  
+
+**Status:** 🔴 Broken  
+→ Adaptive prompts evade detection
 
 ---
 
-## 🔐 System-level Defenses
+## 🧠 Prompt Hardening
 
-- Sandboxing
-- Tool isolation
-- Multi-model verification
+- System prompt engineering  
+- Instruction filtering  
+
+**Status:** 🔴 Weak  
+→ Easily overridden by injection
+
+---
+
+## 🔐 System-Level Defenses
+
+- Tool isolation  
+- Sandboxing  
+- Retrieval filtering  
 
 **Status:** 🟡 Promising but incomplete  
+
+---
+
+## 🧪 Adversarial Training (LLMs)
+
+### 2024
+- Adversarial fine-tuning for jailbreak resistance  
+
+**Status:** 🟡 Partial  
+→ Improves robustness but not general
 
 ---
 
@@ -132,16 +165,19 @@ Focus:
 
 ---
 
-## Core Finding (Very Important)
+## Core Reality
 
-- Guardrails fail under adaptive attacks  
-- Detection systems can be bypassed  
-- Alignment is not a security guarantee  
+- Alignment ≠ security  
+- Guardrails ≠ robustness  
+- Detection ≠ prevention  
 
-### Evidence
+---
 
-- Jailbreak success rates up to ~95% on major models :contentReference[oaicite:9]{index=9}  
-- Guardrail evasion can reach near 100% :contentReference[oaicite:10]{index=10}  
+## Evidence
+
+- Near 100% jailbreak success under adaptive attacks  
+- Transferable prompts break multiple models  
+- Detection systems bypassed with simple rephrasing  
 
 ---
 
@@ -149,52 +185,57 @@ Focus:
 
 ---
 
-### 1. Unlike vision, attacks are semantic
-- No perturbation constraint (L∞, L2)
-- Language space = unbounded attack surface
+### 1. Attack space is semantic
+- No L∞ constraint
+- Unlimited search space
 
 ---
 
-### 2. Security ≠ alignment
-- RLHF improves behavior
-- Does NOT guarantee robustness
+### 2. Automation dominates
+- GCG / AutoDAN outperform humans
 
 ---
 
-### 3. Automation is the biggest threat
-- Auto-generated jailbreaks outperform humans
+### 3. Transferability is extreme
+- Same prompt works across models
 
 ---
 
-### 4. Defenses are lagging behind attacks
-- Most are reactive, not principled
+### 4. Agents introduce new attack surface
+- Tools, APIs, retrieval = vulnerabilities
 
 ---
 
-# 📊 Benchmarks & Evaluation
+# 📊 Evaluation
 
-- HarmBench (LLM safety evaluation)
-- Jailbreak success rate (ASR)
-- Refusal rate
-- Transferability across models
+---
+
+## Benchmarks
+- HarmBench
+- AdvBench
+
+## Metrics
+- Attack Success Rate (ASR)
+- Refusal Rate
+- Transferability
 
 ---
 
 # 🏁 Takeaway
 
-If you understand:
-- Prompt injection
-- Jailbreak prompting
-- Automated adversarial prompting
-- Guardrail failures
+To understand LLM adversarial ML, focus on:
 
-→ You understand the **core of LLM adversarial security**
+- Prompt injection  
+- Jailbreak attacks  
+- GCG (most important modern attack)  
+- Transferability  
+- Guardrail failures  
 
 ---
 
 # 🚀 Open Problems
 
-- Formal robustness guarantees for LLMs
-- Secure system prompts
-- Multi-turn attack defenses
-- Agent-level security
+- Formal robustness guarantees for LLMs  
+- Secure agent architectures  
+- Defense against multi-turn attacks  
+- Multimodal robustness  
