@@ -1,22 +1,16 @@
-# 🖼️ Adversarial Machine Learning in Vision — Top 1% Papers
+# 🖼️ Adversarial Machine Learning in Vision — Top Papers (~50 Core Works)
 
-A **high-confidence, minimal-noise** collection of the most important papers in adversarial robustness for computer vision.
-
-This list prioritizes:
-- Top venues (ICLR, NeurIPS, ICML, CVPR, ICCV, S&P)
-- High impact (widely cited / foundational)
-- Conceptual importance (introduced new attack/defense classes)
+A **high-confidence, minimal-noise** collection of the most important papers in adversarial robustness.
 
 ---
 
 ## ⚡ Quick Jump
-
-- [White-box Attacks](#white-box-attacks)
-- [Black-box Attacks](#black-box-attacks)
-- [Universal & Physical Attacks](#universal--physical-attacks)
-- [Evaluation](#evaluation)
-- [Defenses](#defenses)
-- [Broken Defenses (Critical Reading)](#broken-defenses-critical-reading)
+- White-box
+- Black-box (Transfer + Query)
+- Universal & Physical
+- Evaluation
+- Defenses
+- Broken Defenses
 
 ---
 
@@ -27,71 +21,97 @@ This list prioritizes:
 ## White-box Attacks
 
 ### 2015
-- [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572) — *ICLR*  
-  **FGSM**  
-  → First practical gradient-based attack
+- Explaining and Harnessing Adversarial Examples (FGSM) — ICLR  
 
 ### 2016
-- [DeepFool](https://arxiv.org/abs/1511.04599) — *CVPR*  
-  → Minimal perturbation attack (geometry-based)
+- DeepFool — CVPR  
 
 ### 2017
-- [Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/abs/1608.04644) — *ICLR*  
-  **Carlini & Wagner (C&W)**  
-  → Breaks most early defenses
+- Carlini & Wagner Attack — ICLR  
+- PGD Attack (Madry et al.) — ICLR  
 
-### 2017
-- [Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083) — *ICLR*  
-  **PGD Attack**  
-  → Gold standard first-order adversary
+### 2018
+- Basic Iterative Method (Kurakin et al.) — ICLR Workshop  
+- Momentum Iterative FGSM (MI-FGSM) — CVPR  
+
+### 2019
+- Diverse Input Method (DIM) — CVPR  
+- Translation-Invariant Attacks (TI-FGSM) — CVPR  
+
+### 2020
+- Expectation Over Transformation (EOT) — ICML  
 
 ---
 
 ## Black-box Attacks
 
-### 2017
-- [Practical Black-Box Attacks against Machine Learning](https://arxiv.org/abs/1602.02697) — *AsiaCCS*  
-  → Transfer-based attack framework
+### Transfer-based
 
-### 2018
-- [Boundary Attack](https://arxiv.org/abs/1712.04248) — *ICLR*  
-  → Decision-based attack (no gradients)
+#### 2017
+- Practical Black-Box Attacks — AsiaCCS  
+
+#### 2018–2020 (Transfer Improvements)
+- MI-FGSM (transfer boost) — CVPR  
+- DIM — CVPR  
+- TI-FGSM — CVPR  
 
 ---
 
-## Query-based Attacks
+### Query-based
+
+#### Score-based
 
 ### 2018
-- [NES Attack (Natural Evolution Strategies)](https://arxiv.org/abs/1703.03864) — *arXiv / NeurIPS Workshop*  
-  → Gradient estimation
+- NES Attack — NeurIPS Workshop  
+
+### 2018
+- SPSA Attack — ICML  
 
 ### 2020
-- [Square Attack](https://arxiv.org/abs/1912.00049) — *ECCV*  
-  → Query-efficient black-box attack
+- Square Attack — ECCV  
+
+---
+
+#### Decision-based
+
+### 2018
+- Boundary Attack — ICLR  
+
+### 2019
+- HopSkipJump Attack — IEEE S&P  
 
 ---
 
 ## Universal & Physical Attacks
 
 ### 2017
-- [Universal Adversarial Perturbations](https://arxiv.org/abs/1610.08401) — *CVPR*  
-  → Input-agnostic attack
-
-### 2017
-- [Adversarial Examples in the Physical World](https://arxiv.org/abs/1607.02533) — *ICLR Workshop*  
-  → Real-world robustness failure
+- Universal Adversarial Perturbations — CVPR  
+- Physical World Attacks — ICLR Workshop  
 
 ### 2018
-- [Adversarial Patch](https://arxiv.org/abs/1712.09665) — *NeurIPS Workshop*  
-  → Localized attack
+- Adversarial Patch — NeurIPS Workshop  
+- Spatial Transform Attack — ICLR  
+
+### 2019
+- Expectation Over Transformation (physical robustness) — ICML  
+
+---
+
+## Advanced Attack Directions
+
+### 2020–2022
+- AutoAttack — ICML  
+- Fast Adaptive Boundary Attack — CVPR  
 
 ---
 
 # 🧪 Evaluation
 
 ### 2020
-- [AutoAttack: Reliable Evaluation of Adversarial Robustness](https://arxiv.org/abs/2003.01690) — *ICML*  
-  → Standardized evaluation suite
+- AutoAttack — ICML  
+
+### 2021
+- RobustBench — NeurIPS  
 
 ---
 
@@ -102,89 +122,102 @@ This list prioritizes:
 ## Adversarial Training (Core)
 
 ### 2017
-- [Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083) — *ICLR*  
-  → Robust optimization (PGD training)  
-  **Status:** 🟡 Partially Broken  
-  → Strong baseline, still vulnerable
+- Madry et al. (PGD Training) — ICLR  
+  **Status:** 🟡
+
+### 2018
+- Ensemble Adversarial Training — ICLR  
+
+### 2019
+- TRADES — ICML  
+  **Status:** 🟡 (best trade-off method)
 
 ---
 
-## Robustness vs Accuracy Trade-off
+## Efficiency Improvements
 
-### 2019
-- [Theoretically Principled Trade-off between Robustness and Accuracy](https://arxiv.org/abs/1901.08573) — *ICLR*  
-  → Fundamental limitation  
-  **Status:** 🟢 Holds
+### 2020
+- Free Adversarial Training — NeurIPS  
+- Fast Adversarial Training — ICLR  
 
 ---
 
 ## Certified Defenses
 
 ### 2018
-- [Certified Defenses via Randomized Smoothing](https://arxiv.org/abs/1801.09344) — *ICLR*  
-  → Provable robustness guarantees  
-  **Status:** 🟢 Holds (limited scale)
+- Certified Defenses (Kolter & Wong) — ICLR  
+  **Status:** 🟢  
+
+### 2019
+- Randomized Smoothing — ICML  
+  **Status:** 🟢  
 
 ---
 
-## Efficient Training
+## Preprocessing / Detection
 
-### 2020
-- [Adversarial Training for Free!](https://arxiv.org/abs/1904.12843) — *NeurIPS*  
-  → Reduces cost of adversarial training  
-  **Status:** 🟡 Partially Broken
+### 2017
+- Feature Squeezing — NDSS  
+  **Status:** 🔴  
+
+### 2018
+- Input Transformations — ICLR  
+  **Status:** 🔴  
 
 ---
 
 # 🚨 Broken Defenses (Critical Reading)
 
-These papers are **essential** — they explain why most defenses fail.
-
 ### 2018
-- [Obfuscated Gradients Give False Sense of Security](https://arxiv.org/abs/1802.00420) — *ICML*  
-  → Shows most defenses rely on gradient masking
+- Obfuscated Gradients — ICML  
+
+### 2019
+- Adaptive Attacks on Defenses — ICML  
 
 ---
 
-## Examples of Broken Ideas
+## Commonly Broken
 
-- Feature squeezing → 🔴 Broken  
-- Randomization defenses → 🔴 Broken  
-- Gradient masking → 🔴 Illusion of robustness  
+- Gradient masking → 🔴  
+- Randomization → 🔴  
+- Preprocessing → 🔴  
 
 ---
 
 # 🧠 Key Insights
 
-### 1. Strong attacks are simple
-- PGD ≈ worst-case first-order attack
+### 1. Attack hierarchy
+FGSM → PGD → C&W → AutoAttack
 
-### 2. Most defenses fail
-- Especially under **adaptive attacks**
+### 2. Strongest attacks today
+- PGD (training)
+- AutoAttack (evaluation)
 
-### 3. Only reliable defenses:
-- Adversarial training (costly)
-- Certified defenses (limited)
+### 3. Only reliable defenses
+- Adversarial training
+- Certified defenses
 
-### 4. Evaluation matters more than method
-- AutoAttack is standard
+### 4. Biggest mistake
+- Not evaluating with adaptive attacks
 
 ---
 
 # 📊 Benchmarks
 
-- CIFAR-10
-- ImageNet
-- RobustBench (leaderboard)
+- CIFAR-10  
+- ImageNet  
+- RobustBench  
 
 ---
 
 # 🏁 Takeaway
 
 If you understand:
-- **FGSM → PGD → C&W**
-- **Transfer & query attacks**
-- **Adversarial training**
-- **Obfuscated gradients paper**
 
-→ You understand **80% of the field**
+- FGSM, PGD, C&W  
+- Transfer + Query attacks  
+- AutoAttack  
+- TRADES  
+- Obfuscated Gradients  
+
+→ You understand **core adversarial ML in vision**
