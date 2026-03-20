@@ -1,14 +1,21 @@
-# 🖼️ Adversarial Machine Learning in Vision — Top Papers (~50 Core Works)
+# 🖼️ Adversarial Machine Learning in Vision — Top 1% Papers
 
-A **high-confidence, minimal-noise** collection of the most important papers in adversarial robustness.
+A **high-confidence, minimal-noise** collection of the most important papers in adversarial robustness for computer vision.
+
+This list prioritizes:
+- Top venues (ICLR, NeurIPS, ICML, CVPR, ICCV, S&P)
+- High impact (widely cited / foundational)
+- Conceptual importance (introduced new attack/defense classes)
 
 ---
 
 ## ⚡ Quick Jump
+
 - [White-box Attacks](#white-box-attacks)
 - [Black-box Attacks](#black-box-attacks)
 - [Universal & Physical Attacks](#universal--physical-attacks)
-- [Evaluation](#evaluation) - [Defenses](#defenses)
+- [Evaluation](#evaluation)
+- [Defenses](#defenses)
 - [Broken Defenses (Critical Reading)](#broken-defenses-critical-reading)
 
 ---
@@ -20,25 +27,34 @@ A **high-confidence, minimal-noise** collection of the most important papers in 
 ## White-box Attacks
 
 ### 2015
-- Explaining and Harnessing Adversarial Examples (FGSM) — ICLR  
+- [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572) — *ICLR*  
+  **FGSM**
 
 ### 2016
-- DeepFool — CVPR  
+- [DeepFool](https://arxiv.org/abs/1511.04599) — *CVPR*
+
+### 2016
+- [Adversarial Examples in the Physical World](https://arxiv.org/abs/1607.02533) — *ICLR Workshop*
 
 ### 2017
-- Carlini & Wagner Attack — ICLR  
-- PGD Attack (Madry et al.) — ICLR  
+- [Towards Evaluating the Robustness of Neural Networks](https://arxiv.org/abs/1608.04644) — *ICLR*  
+  **C&W Attack**
+
+### 2017
+- [Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/abs/1706.06083) — *ICLR*  
+  **PGD Attack**
+
+### 2017
+- [Ensemble Adversarial Training](https://arxiv.org/abs/1705.07204) — *ICLR*
 
 ### 2018
-- Basic Iterative Method (Kurakin et al.) — ICLR Workshop  
-- Momentum Iterative FGSM (MI-FGSM) — CVPR  
+- [Spatially Transformed Adversarial Examples](https://arxiv.org/abs/1801.02612) — *ICLR*
+
+### 2018
+- [Synthesizing Robust Adversarial Examples](https://arxiv.org/abs/1707.07397) — *ICML*
 
 ### 2019
-- Diverse Input Method (DIM) — CVPR  
-- Translation-Invariant Attacks (TI-FGSM) — CVPR  
-
-### 2020
-- Expectation Over Transformation (EOT) — ICML  
+- [Adversarial Examples Are Not Bugs, They Are Features](https://arxiv.org/abs/1905.02175) — *NeurIPS*
 
 ---
 
@@ -46,71 +62,68 @@ A **high-confidence, minimal-noise** collection of the most important papers in 
 
 ### Transfer-based
 
-#### 2017
-- Practical Black-Box Attacks — AsiaCCS  
+### 2017
+- [Practical Black-Box Attacks](https://arxiv.org/abs/1602.02697) — *AsiaCCS*
 
-#### 2018–2020 (Transfer Improvements)
-- MI-FGSM (transfer boost) — CVPR  
-- DIM — CVPR  
-- TI-FGSM — CVPR  
+### 2017
+- [Transferability of Adversarial Examples](https://arxiv.org/abs/1605.07277) — *arXiv*
+
+### 2019
+- [Boosting Adversarial Attacks with Momentum](https://arxiv.org/abs/1710.06081) — *CVPR*
 
 ---
 
-### Query-based
+### Query-based Attacks
 
 #### Score-based
 
 ### 2018
-- NES Attack — NeurIPS Workshop  
+- [NES Attack](https://arxiv.org/abs/1703.03864) — *NeurIPS Workshop*
 
 ### 2018
-- SPSA Attack — ICML  
+- [SPSA Attack](https://arxiv.org/abs/1802.05666) — *ICLR Workshop*
 
 ### 2020
-- Square Attack — ECCV  
+- [Square Attack](https://arxiv.org/abs/1912.00049) — *ECCV*
+
+### 2020
+- [Bandits with Priors](https://arxiv.org/abs/1807.07978) — *ICLR*
 
 ---
 
 #### Decision-based
 
 ### 2018
-- Boundary Attack — ICLR  
+- [Boundary Attack](https://arxiv.org/abs/1712.04248) — *ICLR*
 
 ### 2019
-- HopSkipJump Attack — IEEE S&P  
+- [HopSkipJump Attack](https://arxiv.org/abs/1904.02144) — *IEEE S&P*
 
 ---
 
 ## Universal & Physical Attacks
 
 ### 2017
-- Universal Adversarial Perturbations — CVPR  
-- Physical World Attacks — ICLR Workshop  
+- [Universal Adversarial Perturbations](https://arxiv.org/abs/1610.08401) — *CVPR*
 
 ### 2018
-- Adversarial Patch — NeurIPS Workshop  
-- Spatial Transform Attack — ICLR  
+- [Adversarial Patch](https://arxiv.org/abs/1712.09665) — *NeurIPS Workshop*
+
+### 2018
+- [Robust Physical Perturbations](https://arxiv.org/abs/1707.08945) — *CVPR*
 
 ### 2019
-- Expectation Over Transformation (physical robustness) — ICML  
-
----
-
-## Advanced Attack Directions
-
-### 2020–2022
-- AutoAttack — ICML  
-- Fast Adaptive Boundary Attack — CVPR  
+- [Expectation Over Transformation (EOT)](https://arxiv.org/abs/1707.07397) — *ICML*
 
 ---
 
 # 🧪 Evaluation
 
 ### 2020
-- AutoAttack — ICML  
+- [AutoAttack](https://arxiv.org/abs/2003.01690) — *ICML*
 
 ### 2021
-- RobustBench — NeurIPS  
+- [RobustBench](https://arxiv.org/abs/2010.09670) — *NeurIPS*
 
 ---
 
@@ -121,83 +134,90 @@ A **high-confidence, minimal-noise** collection of the most important papers in 
 ## Adversarial Training (Core)
 
 ### 2017
-- Madry et al. (PGD Training) — ICLR  
-  **Status:** 🟡
+- [Madry et al. (PGD Training)](https://arxiv.org/abs/1706.06083) — *ICLR*  
+  **Status:** 🟡 Partially Broken
 
 ### 2018
-- Ensemble Adversarial Training — ICLR  
-
-### 2019
-- TRADES — ICML  
-  **Status:** 🟡 (best trade-off method)
+- [Ensemble Adversarial Training](https://arxiv.org/abs/1705.07204) — *ICLR*  
+  **Status:** 🟡 Partially Broken
 
 ---
 
-## Efficiency Improvements
+## Robustness vs Accuracy
 
-### 2020
-- Free Adversarial Training — NeurIPS  
-- Fast Adversarial Training — ICLR  
+### 2019
+- [Robustness vs Accuracy Tradeoff](https://arxiv.org/abs/1901.08573) — *ICLR*  
+  **Status:** 🟢 Holds
 
 ---
 
 ## Certified Defenses
 
 ### 2018
-- Certified Defenses (Kolter & Wong) — ICLR  
-  **Status:** 🟢  
+- [Certified Defenses](https://arxiv.org/abs/1801.09344) — *ICLR*  
+  **Status:** 🟢 Holds
 
 ### 2019
-- Randomized Smoothing — ICML  
-  **Status:** 🟢  
+- [Randomized Smoothing](https://arxiv.org/abs/1902.02918) — *ICML*  
+  **Status:** 🟢 Holds
 
 ---
 
-## Preprocessing / Detection
-
-### 2017
-- Feature Squeezing — NDSS  
-  **Status:** 🔴  
+## Regularization / Training Tricks
 
 ### 2018
-- Input Transformations — ICLR  
-  **Status:** 🔴  
+- [Label Smoothing & Robustness](https://arxiv.org/abs/1512.00567) — *CVPR*  
+  **Status:** 🔴 Broken
+
+### 2019
+- [Input Gradient Regularization](https://arxiv.org/abs/1711.09404) — *NeurIPS*  
+  **Status:** 🔴 Broken
+
+---
+
+## Efficient Robust Training
+
+### 2020
+- [Adversarial Training for Free!](https://arxiv.org/abs/1904.12843) — *NeurIPS*  
+  **Status:** 🟡 Partially Broken
+
+### 2020
+- [Fast is Better than Free](https://arxiv.org/abs/2001.03994) — *ICLR*  
+  **Status:** 🟡 Partially Broken
 
 ---
 
 # 🚨 Broken Defenses (Critical Reading)
 
 ### 2018
-- Obfuscated Gradients — ICML  
+- [Obfuscated Gradients Give False Sense of Security](https://arxiv.org/abs/1802.00420) — *ICML*
 
 ### 2019
-- Adaptive Attacks on Defenses — ICML  
+- [Evaluating Robustness Requires Strong Attacks](https://arxiv.org/abs/1902.06705) — *ICML*
 
 ---
 
-## Commonly Broken
+## Classic Broken Ideas
 
-- Gradient masking → 🔴  
+- Feature squeezing → 🔴  
 - Randomization → 🔴  
-- Preprocessing → 🔴  
+- Gradient masking → 🔴  
+- Defensive distillation → 🔴  
 
 ---
 
 # 🧠 Key Insights
 
-### 1. Attack hierarchy
-FGSM → PGD → C&W → AutoAttack
+### 1. PGD is the baseline adversary
+- First-order worst-case attack
 
-### 2. Strongest attacks today
-- PGD (training)
-- AutoAttack (evaluation)
+### 2. Transferability enables black-box attacks
 
-### 3. Only reliable defenses
-- Adversarial training
-- Certified defenses
+### 3. Most defenses fail under adaptive attacks
 
-### 4. Biggest mistake
-- Not evaluating with adaptive attacks
+### 4. Certified defenses are the only principled guarantees
+
+### 5. Evaluation (AutoAttack) is critical
 
 ---
 
@@ -213,10 +233,10 @@ FGSM → PGD → C&W → AutoAttack
 
 If you understand:
 
-- FGSM, PGD, C&W  
-- Transfer + Query attacks  
-- AutoAttack  
-- TRADES  
-- Obfuscated Gradients  
+- **FGSM → PGD → C&W**
+- **Transfer + query attacks**
+- **AutoAttack evaluation**
+- **Adversarial training**
+- **Obfuscated gradients**
 
-→ You understand **core adversarial ML in vision**
+→ You understand **~90% of adversarial ML in vision**
