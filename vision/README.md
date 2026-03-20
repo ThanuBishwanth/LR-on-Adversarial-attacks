@@ -5,12 +5,11 @@ A **high-confidence, minimal-noise** collection of the most important papers in 
 ---
 
 ## ⚡ Quick Jump
-- White-box
-- Black-box (Transfer + Query)
-- Universal & Physical
-- Evaluation
-- Defenses
-- Broken Defenses
+- [White-box Attacks](#white-box-attacks)
+- [Black-box Attacks](#black-box-attacks)
+- [Universal & Physical Attacks](#universal--physical-attacks)
+- [Evaluation](#evaluation) - [Defenses](#defenses)
+- [Broken Defenses (Critical Reading)](#broken-defenses-critical-reading)
 
 ---
 
