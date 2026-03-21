@@ -1,19 +1,6 @@
 # Adversarial Machine Learning in Vision
 
-This list prioritizes:
-- Top venues (ICLR, NeurIPS, ICML, CVPR, ICCV, S&P)
-- High impact (widely cited / foundational)
-- Conceptual importance (introduced new attack/defense classes)
-
-
-- [White-box Attacks](#white-box-attacks)
-- [Black-box Attacks](#black-box-attacks)
-- [Universal & Physical Attacks](#universal--physical-attacks)
-- [Evaluation](#evaluation)
-- [Defenses](#defenses)
-- [Broken Defenses (Critical Reading)](#broken-defenses-critical-reading)
-
-# ⚔️ Attacks
+# Attacks
 
 ## White-box Attacks
 ### 2015
@@ -47,8 +34,6 @@ This list prioritizes:
 
 ### 2019
 - [Boosting Adversarial Attacks with Momentum](https://arxiv.org/abs/1710.06081) — *CVPR*
-
----
 
 ### Query-based Attacks
 
@@ -94,7 +79,7 @@ This list prioritizes:
 - [RobustBench](https://arxiv.org/abs/2010.09670) — *NeurIPS*
 
 
-# Defenses
+## Defenses
 
 ## Adversarial Training (Core)
 
@@ -151,25 +136,6 @@ This list prioritizes:
 ### 2019
 - [Evaluating Robustness Requires Strong Attacks](https://arxiv.org/abs/1902.06705) — *ICML*
 
-## Classic Broken Ideas
-
-- Feature squeezing  
-- Randomization 
-- Gradient masking  
-- Defensive distillation   
-
-# 🧠 Key Insights
-
-### 1. PGD is the baseline adversary
-- First-order worst-case attack
-
-### 2. Transferability enables black-box attacks
-
-### 3. Most defenses fail under adaptive attacks
-
-### 4. Certified defenses are the only principled guarantees
-
-### 5. Evaluation (AutoAttack) is critical
 
 
 #  Benchmarks
