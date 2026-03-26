@@ -3,7 +3,7 @@
 - [DISSECTING ADVERSARIAL ROBUSTNESS OF MULTIMODAL LM AGENTS](https://arxiv.org/pdf/2406.12814) - *Not Defended - ICLR 2025*
 
 ## Defences
-- [Robust Vision-Language Models via Tensor Decomposition: A Defense Against Adversarial Attacks](https://arxiv.org/pdf/2509.16163) - *Not Broken  - ICCV 2025 Published*
+- [Robust Vision-Language Models via Tensor Decomposition: A Defense Against Adversarial Attacks](https://arxiv.org/pdf/2509.16163) - *Not Broken  - Not Published*
 - [The VLLM Safety Paradox: Dual Ease in Jailbreak Attack and Defense](https://arxiv.org/pdf/2411.08410) - *Not Broken  - NNeurIPS Poster 2025 Published*
 
 
