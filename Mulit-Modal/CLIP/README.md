@@ -8,3 +8,6 @@
 - [FPT-Noise: Dynamic Scene-Aware Counterattack for Test-Time Adversarial Defense in Vision-Language Models](https://arxiv.org/pdf/2510.20856) - *Not Broken & Not Published*
 - [CLIP is Strong Enough to Fight Back: Test-time Counterattacks towards Zero-shot Adversarial Robustness of CLIP](https://arxiv.org/pdf/2503.03613) - *Not Broken & CVPR 2025 Published*
 - [TTP: Test-Time Padding for Adversarial Detection and Robust Adaptation on Vision-Language Models](https://arxiv.org/pdf/2512.16523) - *Not Broken & Not Published*
+- [COLA: Context-aware Language-drivenTest-time Adaptation](https://arxiv.org/pdf/2509.17598) - *Not Broken & Not Published*
+- [ATAC: Augmentation-Based Test-Time Adversarial Correction for CLIP](https://arxiv.org/pdf/2511.17362) - *Not Broken & Not Published*
+- 
