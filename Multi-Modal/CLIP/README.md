@@ -10,4 +10,5 @@
 - [TTP: Test-Time Padding for Adversarial Detection and Robust Adaptation on Vision-Language Models](https://arxiv.org/pdf/2512.16523) - *Not Broken & Not Published*
 - [COLA: Context-aware Language-drivenTest-time Adaptation](https://arxiv.org/pdf/2509.17598) - *Not Broken & Not Published*
 - [ATAC: Augmentation-Based Test-Time Adversarial Correction for CLIP](https://arxiv.org/pdf/2511.17362) - *Not Broken & Not Published*
+- [ADVERSARIAL ATTACKS ALREADY TELL THE ANSWER: DIRECTIONAL BIAS-GUIDED TEST-TIME DEFENSE FOR VISION-LANGUAGE MODELS](https://openreview.net/pdf?id=UqC2oFRRyc)- *Not Broken & ICLR 2026*
 - 
